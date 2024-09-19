@@ -24,6 +24,6 @@ public class WeatherForecastTests : IClassFixture<CustomWebApplicationFactory<Pr
         // Assert
         response.EnsureSuccessStatusCode(); // Status Code 200-299
         Assert.Equal("application/json; charset=utf-8", 
-            response.Content.Headers.ContentType.ToString());
+            response.Content.Headers.ContentType!.ToString());
     }
 }
