@@ -45,3 +45,9 @@ jobs:
         customSettings: 'minimumCoverageThresholds:lineCoverage=95'
     - name: Upload coverage into summary
       run: cat $GITHUB_WORKSPACE/coveragereport/SummaryGithub.md >> $GITHUB_STEP_SUMMARY
+  deploy:
+    environment: pull request
+    runs-on: ubuntu-latest
+    steps:
+    - name: build
+      run: echo 'building'
